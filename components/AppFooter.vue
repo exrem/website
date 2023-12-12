@@ -6,7 +6,7 @@ const { data } = await useFetch('/api/spotify/playing')
   <footer class='flex flex-col mt-12 p-12 bg-black text-white'>
     <div class='flex flex-col gap-24 xl:flex-row'>
       <div class='flex flex-col gap-4'>
-        <h1 class='font-extrabold text-3xl'>{{ $t('footer.name') }}</h1>
+        <h1 class='font-extrabold text-3xl'>Äkräm Ca'fär</h1>
         <div class='flex items-start gap-2' v-if="data">
           <Icon class='w-auto h-5' name='simple-icons:spotify' />
           <div class='flex flex-col'>
@@ -17,7 +17,7 @@ const { data } = await useFetch('/api/spotify/playing')
         <span v-else>{{ $t('footer.not-listening') }}</span>
       </div>
       <div class='flex flex-col gap-1'>
-        <h1 class='text-xl font-bold'>Äkräm Cä'fär</h1>
+        <h1 class='text-xl font-bold'>{{ $t('footer.name') }}</h1>
         <NuxtLink class='underline-offset-4 hover:underline' to='/'>{{ $t('title./') }}</NuxtLink>
         <NuxtLink class='underline-offset-4 hover:underline' to='/about'>{{ $t('title./about') }}</NuxtLink>
         <NuxtLink class='underline-offset-4 hover:underline' to='/contact'>{{ $t('title./contact') }}</NuxtLink>

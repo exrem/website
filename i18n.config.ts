@@ -20,6 +20,7 @@ export default defineI18nConfig(() => ({
         'external': 'Xarici keçidlär',
         'github': 'GitHub-da açıq mänbä\' olaraq älçatandır.',
         'listening': 'Qulaq asıram:',
+        'name': 'Äkräm Cä\'fär',
         'not-listening': 'İndi heç näyä qulaq asmıram.'
       },
       'landing': {
@@ -48,6 +49,7 @@ export default defineI18nConfig(() => ({
         'external': 'External links',
         'github': 'Available on GitHub as open source.',
         'listening': 'I am listening to:',
+        'name': 'Akram Jafar',
         'not-listening': 'Currently not listening to anything.'
       },
       'landing': {
@@ -76,6 +78,7 @@ export default defineI18nConfig(() => ({
         'external': 'Dış bağlantılar',
         'github': 'GitHub\'da açık kaynak olarak mevcut.',
         'listening': 'Şu an dinliyorum:',
+        'name': 'Ekrem Cafer',
         'not-listening': 'Şu an hiçbir şey dinlemiyorum.'
       },
       'landing': {
