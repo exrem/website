@@ -17,7 +17,7 @@ const { data } = await useFetch('/api/spotify/playing')
         <span v-else>{{ $t('footer.not-listening') }}</span>
       </div>
       <div class='flex flex-col gap-1'>
-        <h1 class='text-xl font-bold'>{{ $t('footer.name') }}</h1>
+        <h1 class='text-xl font-bold'>Äkräm Cä'fär</h1>
         <NuxtLink class='underline-offset-4 hover:underline' to='/'>{{ $t('title./') }}</NuxtLink>
         <NuxtLink class='underline-offset-4 hover:underline' to='/about'>{{ $t('title./about') }}</NuxtLink>
         <NuxtLink class='underline-offset-4 hover:underline' to='/contact'>{{ $t('title./contact') }}</NuxtLink>
