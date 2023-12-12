@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: url('/assets/grid.svg');
+  margin: 0.5rem;
+  font-family: 'Manrope', 'Rubik', 'Noto Sans Japanese', sans-serif
+}
+
+@media (min-width: 1280px) {
+  body {
+    margin: 0.5rem 3rem
+  }
+}
