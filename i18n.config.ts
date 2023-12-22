@@ -8,7 +8,7 @@ const age = ((): number => {
 
 export default defineI18nConfig(() => ({
   legacy: false,
-  locale: 'az',
+  locale: 'en',
   messages: {
     az: {
       'about': '2008-ci il oktyabrın 14-dä Xırdalanda anadan olmuşam. Körpäliyimdän bu yana kompüterlärlä, 8-9 yaşımdan bäri isä kodlarla dostluq eläyiram. Hal-hazırda da 10-cu sinifdä tähsil alıram.',
