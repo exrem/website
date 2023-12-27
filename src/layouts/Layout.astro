@@ -1,4 +1,10 @@
 ---
+import Navigation from '@components/Navigation.astro'
+import Translate from '@utils/translate'
+import { locale as LocaleState } from 'src/locale'
+
+const locale = LocaleState.value ?? 'en'
+
 interface Props {
 	title: string
 }
@@ -7,25 +13,37 @@ const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content="I'm a 15-years-old developer" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-		<title>{ title }</title>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width' />
+		<meta name='description' content="I'm a 15-years-old student based in Baku, Azerbaijan." />
+		<meta property='og:image' content={`${Astro.url.origin}/og?title=${title}`} />
+		<meta name='generator' content={Astro.generator} />
+		<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png'>
+		<link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png'>
+		<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png'>
+		<link rel='manifest' href='/site.webmanifest'>
+		<link rel='preconnect' href='https://fonts.googleapis.com'>
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+		<link href='https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap' rel='stylesheet'>
+		<title>{ `${Translate(locale, `title.${title}`)} — ${Translate (locale, `title.name`)}` }</title>
 	</head>
 	<body>
+		<Navigation />
 		<slot />
 	</body>
 </html>
+
 <style is:global>
-	
+	:root {
+
+	}
+
+	body {
+		margin: 0;
+		background-color: #000;
+		color: #fff;
+		font-family: 'Manrope', sans-serif
+	}
 </style>

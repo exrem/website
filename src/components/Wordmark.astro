@@ -1,0 +1,20 @@
+---
+interface Props {
+  style?: string
+}
+
+const { style } = Astro.props
+---
+
+<span style={style}>
+  əkrəm<span class='dot'>.</span>
+</span>
+<style>
+  span {
+    font-weight: 800;
+  }
+
+  .dot {
+    color: #ABABAB
+  }
+</style>
