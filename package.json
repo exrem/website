@@ -1,24 +1,17 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "v1-astro",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "start": "npm run build && node .output/server/index.mjs",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "astro dev --host",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxt/image": "^1.1.0",
-    "@nuxtjs/i18n": "^8.0.0-rc.8",
-    "@nuxtjs/tailwindcss": "^6.10.1",
-    "nuxt": "^3.8.2",
-    "nuxt-headlessui": "^1.1.4",
-    "nuxt-icon": "^0.6.7",
-    "vue": "^3.3.10",
-    "vue-router": "^4.2.5"
+  "dependencies": {
+    "@astrojs/check": "^0.3.4",
+    "astro": "^4.0.7",
+    "typescript": "^5.3.3"
   }
 }
