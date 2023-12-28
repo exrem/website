@@ -15,6 +15,7 @@
     "@types/node": "^20.10.5",
     "astro": "^4.0.7",
     "nanostores": "^0.9.5",
+    "sass": "^1.69.5",
     "satori": "^0.10.11",
     "typescript": "^5.3.3"
   }

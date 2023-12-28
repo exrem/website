@@ -1,0 +1,50 @@
+---
+import t from '@utils/translate'
+---
+
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width' />
+		<meta name='description' content="I'm a 15-years-old student based in Baku, Azerbaijan." />
+		<meta property='og:image' content={`${Astro.url.origin}/og?title=${t('title.404')}`} />
+		<meta name='generator' content={Astro.generator} />
+		<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png'>
+		<link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png'>
+		<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png'>
+		<link rel='manifest' href='/site.webmanifest'>
+		<link rel='preconnect' href='https://fonts.googleapis.com'>
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+		<link href='https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap' rel='stylesheet'>
+		<title>{ `${t('title.404')} — ${t('title.name')}` }</title>
+	</head>
+	<body>
+    <h1>{ t('404.lost') }</h1>
+    <a href='/'>{ t('404.home') }</a>
+	</body>
+</html>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+		margin: 0;
+		background-color: #000;
+		color: #fff;
+    height: 100vh;
+		font-family: 'Manrope', sans-serif
+	}
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-decoration-color: #fff;
+    text-underline-offset: 6px
+  }
+
+  a:hover {
+    text-decoration: underline
+  }
+</style>

@@ -1,12 +1,8 @@
 ---
-import Navigation from '@components/Navigation.astro'
-import Translate from '@utils/translate'
-import { locale as LocaleState } from 'src/locale'
-
-const locale = LocaleState.value ?? 'en'
+import { default as t, Dictionary } from '@utils/translate'
 
 interface Props {
-	title: string
+	title: keyof Dictionary['title']
 }
 
 const { title } = Astro.props
@@ -27,23 +23,59 @@ const { title } = Astro.props
 		<link rel='preconnect' href='https://fonts.googleapis.com'>
 		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 		<link href='https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap' rel='stylesheet'>
-		<title>{ `${Translate(locale, `title.${title}`)} — ${Translate (locale, `title.name`)}` }</title>
+		<title>{ `${t(`title.${title}`)} — ${t('title.name')}` }</title>
 	</head>
 	<body>
-		<Navigation />
+		<nav id='desktopNavbar'>
+			<a href='/'><span>əkrəm<span>.</span></span></a>
+			<a href='/about'>{ t('title.about') }</a>
+			<a href='/projects'>{ t('title.projects') }</a>
+			<a href='/blog'>{ t('title.blog') }</a>
+			<a href='/contact'>{ t('title.contact') }</a>
+		</nav>
 		<slot />
 	</body>
 </html>
 
-<style is:global>
-	:root {
-
-	}
-
+<style lang='scss' is:global>
 	body {
 		margin: 0;
 		background-color: #000;
 		color: #fff;
 		font-family: 'Manrope', sans-serif
 	}
+
+	a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+	nav a, footer a {
+		text-decoration-color: #fff;
+    text-underline-offset: 6px;
+  }
+
+  nav a:hover, footer a:hover {
+    text-decoration: underline;
+  }
+
+	#desktopNavbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem 0;
+    text-transform: uppercase;
+
+    a:first-child {
+      font-weight: 800;
+      font-size: 1.5rem;
+      text-transform: lowercase;
+      text-decoration: none;
+
+      span span {
+        color: #ABABAB
+      }
+    }
+  }
 </style>

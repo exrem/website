@@ -1,12 +1,26 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import Translate from '@utils/translate'
+import t from '@utils/translate'
 ---
 
-<Layout title='Home'>
-	{ Translate('en', 'title.home') }
+<Layout title="home">
+	<header>
+		<h1>{t("home.im")}</h1>
+	</header>
 </Layout>
 
-<style>
-	
+<style lang="scss">
+	@media screen and (min-width: 1366px) {
+		header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 2rem;
+
+			h1 {
+				margin: 16rem 0;
+				font-size: 4rem;
+			}
+		}
+	}
 </style>
