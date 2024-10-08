@@ -1,15 +1,15 @@
 const redirect = (linkAlias: string) => ({
   discord: 'https://discord.com/users/339514931277856778',
-  flick: 'https://github.com/flicktogether',
+  flick: 'https://github.com/byflick',
   github: 'https://github.com/exrem',
-  instagram: 'https://instagram.com/erayreperit',
+  instagram: 'https://instagram.com/sefehpisikler',
   mail: 'mailto:akremjafar@outlook.com',
   reddit: 'https://reddit.com/u/eraykim',
-  repo: 'https://github.com/exrem/exrem.github.io',
-  sozluk: 'https://github.com/exrem/sozluk',
-  spotify: 'https://sptfy.com/erayreperit',
+  repo: 'https://github.com/exrem/website',
+  sozluk: 'https://github.com/sozluk-az',
+  spotify: 'https://spti.fi/ekrem',
   twitter: 'https://twitter.com/erayreperit',
-  youtube: 'https://youtube.com/@atmosph'
+  youtube: 'https://youtube.com/@әкрәм'
 }[linkAlias])
 
 export default defineNuxtRouteMiddleware(({ query }) => {
