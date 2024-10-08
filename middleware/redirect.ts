@@ -9,7 +9,7 @@ const redirect = (linkAlias: string) => ({
   sozluk: 'https://github.com/sozluk-az',
   spotify: 'https://spti.fi/ekrem',
   twitter: 'https://twitter.com/erayreperit',
-  youtube: 'https://youtube.com/@әкрәм'
+  youtube: 'https://www.youtube.com/@%D3%99%D0%BA%D1%80%D3%99%D0%BC'
 }[linkAlias])
 
 export default defineNuxtRouteMiddleware(({ query }) => {
