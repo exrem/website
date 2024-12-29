@@ -1,24 +1,14 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
+  "name": "website",
+  "version": "1.0.0",
+  "description": "blehhh :p",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "start": "npm run build && node .output/server/index.mjs",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxt/image": "^1.1.0",
-    "@nuxtjs/i18n": "^8.0.0-rc.8",
-    "@nuxtjs/tailwindcss": "^6.10.1",
-    "nuxt": "^3.8.2",
-    "nuxt-headlessui": "^1.1.4",
-    "nuxt-icon": "^0.6.7",
-    "vue": "^3.3.10",
-    "vue-router": "^4.2.5"
+    "vite": "^6.0.6"
   }
 }
